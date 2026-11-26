@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Choose the size of the All-kits Home 2026 jersey: stock for every size, a chest and length chart in centimetres, and a note about sizing between two sizes.">
+  <meta name="author" content="Tianze Tang">
+  <meta name="theme-color" content="#0F3460">
+  <title>Size and fit — All-kits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html">
+        <span class="crest" aria-hidden="true">AK</span>
+        All-kits
+      </a>
+
+      <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Open the navigation menu">
+      <label class="menu-btn" for="menu-toggle"><span aria-hidden="true">☰</span></label>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="size.html" aria-current="page">Sizes</a></li>
+          <li><a href="payment.html">Payment</a></li>
+        </ul>
+      </nav>
+
+      <a class="cart" href="payment.html" aria-label="Cart, one jersey">
+        <span class="cart-label">Cart</span>
+        <span class="cart-count">1</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap band">
+      <a class="back" href="index.html">← Back to the home page</a>
+
+      <div class="product">
+        <!-- left column: the shirt and the print preview -->
+        <div class="stack">
+          <div class="product-photo">
+            <img src="images/shirt-home.svg" alt="Navy Home 2026 jersey with white collar and cuffs and the number 7 printed on the front.">
+          </div>
+          <div class="product-photo">
+            <img src="images/shirt-print.svg" alt="The same shirt printed with a name and the number 10 on the back, shown as a cream preview.">
+          </div>
+          <p class="hint">Photo and print preview. Printing adds one day and cannot be returned.</p>
+        </div>
+
+        <!-- right column: the whole decision -->
+        <div id="size">
+          <span class="eyebrow">Home 2026 · navy</span>
+          <h1 style="font-size:clamp(26px,4vw,36px);">Choose your size</h1>
+          <p style="margin-top:10px;color:var(--muted);">
+            €89.90 including tax. Chest and length are measured flat, in centimetres, on the table below.
+          </p>
+
+          <!-- six size chips: radio inputs and labels, so the choice works without a script -->
+          <form action="payment.html" method="get" style="margin-top:22px;">
+            <fieldset class="fieldset picker">
+              <legend>Size · XS to XXL</legend>
+              <div class="sizes">
+                <input id="size-xs" name="size" type="radio" value="XS">
+                <label for="size-xs">XS</label>
+
+                <input id="size-s" name="size" type="radio" value="S">
+                <label for="size-s">S</label>
+
+                <input id="size-m" name="size" type="radio" value="M" checked>
+                <label for="size-m">M</label>
+
+                <input id="size-l" name="size" type="radio" value="L">
+                <label for="size-l">L</label>
+
+                <input id="size-xl" name="size" type="radio" value="XL">
+                <label for="size-xl">XL</label>
+
+                <input id="size-xxl" name="size" type="radio" value="XXL">
+                <label for="size-xxl">XXL</label>
+              </div>
+
+              <p class="stock-line stock-xs">XS — <strong class="label-out">Out of stock</strong>, restock expected in March.</p>
+              <p class="stock-line stock-s">S — <strong class="label-in">In stock</strong>, 4 shirts on the rail.</p>
+              <p class="stock-line is-default stock-m">M — <strong class="label-in">In stock</strong>, 7 shirts on the rail.</p>
+              <p class="stock-line stock-l">L — <strong class="label-in">In stock</strong>, 3 shirts on the rail.</p>
+              <p class="stock-line stock-xl">XL — <strong class="label-in">In stock</strong>, 2 shirts on the rail.</p>
+              <p class="stock-line stock-xxl">XXL — <strong class="label-out">Out of stock</strong>, join the restock list below.</p>
+            </fieldset>
+
+            <!-- size chart: a real table with header cells -->
+            <div class="table-wrap" id="chart" style="overflow-x:auto;">
+              <table class="chart">
+                <caption>Size chart — chest and length measured flat, in centimetres.</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Size</th>
+                    <th scope="col">Chest</th>
+                    <th scope="col">Length</th>
+                    <th scope="col">Sleeve</th>
+                    <th scope="col">Fits body chest</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">XS</th><td>96</td><td>66</td><td>20</td><td>84–88</td></tr>
+                  <tr><th scope="row">S</th><td>102</td><td>69</td><td>21</td><td>88–94</td></tr>
+                  <tr><th scope="row">M</th><td>108</td><td>72</td><td>22</td><td>94–100</td></tr>
+                  <tr><th scope="row">L</th><td>114</td><td>74</td><td>23</td><td>100–106</td></tr>
+                  <tr><th scope="row">XL</th><td>120</td><td>76</td><td>24</td><td>106–112</td></tr>
+                  <tr><th scope="row">XXL</th><td>126</td><td>78</td><td>25</td><td>112–120</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- fit note sits directly above the button that commits the choice -->
+            <div class="note" style="margin-top:16px;">
+              <strong>Between two sizes?</strong> Take the larger one for match wear, the smaller one for
+              every day. Printing makes the back stiffer, so a printed shirt feels half a size smaller.
+            </div>
+
+            <div class="cart-line">
+              <span>Home 2026 · navy · size <strong>M</strong></span>
+              <span class="sum">€89.90</span>
+            </div>
+
+            <div class="btn-row" style="margin-top:18px;">
+              <button class="btn btn-primary" type="submit">Add to cart</button>
+              <a class="btn btn-secondary" href="payment.html">Continue to payment</a>
+            </div>
+            <p class="pay-note">One cart, one amount. Nothing is charged on this page.</p>
+          </form>
+
+          <!-- restock list for the sizes that are out of stock -->
+          <div id="restock" style="margin-top:26px;">
+            <h2 style="font-size:22px;">Restock list</h2>
+            <p class="hint" style="margin-top:6px;">
+              XS and XXL come back in March. Leave an address and the shop writes once, when the size is
+              back on the rail — no newsletter, no other mail.
+            </p>
+            <form action="mailto:shop@all-kits.example" method="post" enctype="text/plain" style="margin-top:12px;">
+              <div class="field">
+                <label for="restock-email">E-mail address</label>
+                <input id="restock-email" name="email" type="email" placeholder="name@example.com">
+              </div>
+              <div class="btn-row" style="margin-top:12px;">
+                <button class="btn btn-secondary" type="submit">Join the restock list</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h2>All-kits</h2>
+        <p>Football jerseys from a small shop in Helsinki. Club, retro and printed shirts, sizes XS to XXL.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="size.html">Sizes and fit</a></li>
+          <li><a href="payment.html">Payment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Shop</h2>
+        <ul>
+          <li><a href="size.html#chart">Size chart</a></li>
+          <li><a href="payment.html#delivery">Delivery and returns</a></li>
+          <li><a href="#main">Back to top ↑</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 All-kits · a student project for DIG001IT1AE-3033</span>
+      <span>HTML + CSS. No JavaScript.</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720" role="img" aria-labelledby="t d">
+  <title id="t">Cream printed away jersey with the number ten</title>
+  <desc id="d">Flat illustration of a pale cream football shirt with a black number 10, black collar and a plain crest.</desc>
+  <defs>
+    <clipPath id="shirt"><path d="M240,108 L360,108 C392,108 414,116 428,128 L508,192 L472,320 L424,300 L424,596 Q424,622 398,622 L202,622 Q176,622 176,596 L176,300 L128,320 L92,192 L172,128 C186,116 208,108 240,108 Z"/></clipPath>
+    <linearGradient id="cloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3EDE1" stop-opacity="1"/>
+      <stop offset="1" stop-color="#E8E1D2" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="720" fill="#EEF1F4"/>
+
+  <!-- shirt body -->
+  <g>
+    <path d="M240,108 L360,108 C392,108 414,116 428,128 L508,192 L472,320 L424,300 L424,596 Q424,622 398,622 L202,622 Q176,622 176,596 L176,300 L128,320 L92,192 L172,128 C186,116 208,108 240,108 Z" fill="url(#cloth)" stroke="#D6CDBC" stroke-width="3"/>
+
+    <g clip-path="url(#shirt)">
+      <g opacity="0.5"><rect x="120" y="500" width="380" height="6" fill="#212121"/></g>
+      <!-- side shading -->
+      <path d="M196,286 L236,286 L236,620 L196,620 Z" fill="#000000" opacity="0.06"/>
+      <path d="M404,286 L364,286 L364,620 L404,620 Z" fill="#000000" opacity="0.06"/>
+    </g>
+
+    <!-- collar -->
+    <!-- collar band -->
+    <path d="M240,108 C272,152 328,152 360,108 C330,126 270,126 240,108 Z" fill="#212121"/>
+    <path d="M240,108 C272,152 328,152 360,108" fill="none" stroke="#212121" stroke-width="6"/>
+
+    <!-- sleeve cuffs -->
+    <path d="M508,192 L472,320 L432,308 L468,180 Z" fill="#212121" opacity="0.95"/>
+    <path d="M92,192 L128,320 L168,308 L132,180 Z" fill="#212121" opacity="0.95"/>
+
+    <!-- hem -->
+    <g clip-path="url(#shirt)"><rect x="176" y="584" width="248" height="16" fill="#212121" opacity="0.35"/></g>
+    <!-- shoulder seams -->
+    <path d="M240,108 L214,300" fill="none" stroke="#D6CDBC" stroke-width="2" opacity="0.35"/>
+    <path d="M360,108 L386,300" fill="none" stroke="#D6CDBC" stroke-width="2" opacity="0.35"/>
+
+    <!-- crest -->
+    <g>
+      <circle cx="252" cy="268" r="26" fill="none" stroke="#212121" stroke-width="4"/>
+      <path d="M240,258 L264,258 L264,276 Q252,288 240,276 Z" fill="#212121" opacity="0.9"/>
+    </g>
+
+    <!-- number -->
+    <text x="300" y="416" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif"
+          font-size="150" font-weight="700" fill="#212121" letter-spacing="2">10</text>
+    <text x="300" y="470" text-anchor="middle" font-family="Arial, sans-serif"
+          font-size="26" font-weight="600" fill="#6B6255" letter-spacing="6">PRINT</text>
+  </g>
+
+  <text x="300" y="690" text-anchor="middle" font-family="Arial, sans-serif" font-size="20"
+        fill="#5B6B7C" letter-spacing="3">PRINTED · No.10</text>
+</svg>

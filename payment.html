@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pay for the All-kits order: the summary, the delivery choice, card, MobilePay or bank transfer, and the total on the button before anything is charged.">
+  <meta name="author" content="Tianze Tang">
+  <meta name="theme-color" content="#0F3460">
+  <title>Payment — All-kits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html">
+        <span class="crest" aria-hidden="true">AK</span>
+        All-kits
+      </a>
+
+      <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Open the navigation menu">
+      <label class="menu-btn" for="menu-toggle"><span aria-hidden="true">☰</span></label>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="size.html">Sizes</a></li>
+          <li><a href="payment.html" aria-current="page">Payment</a></li>
+        </ul>
+      </nav>
+
+      <a class="cart" href="#summary" aria-label="Cart, one jersey">
+        <span class="cart-label">Cart</span>
+        <span class="cart-count">1</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap band">
+      <span class="eyebrow">Step 2 of 2</span>
+      <h1 style="font-size:clamp(26px,4vw,36px);">Pay for the order</h1>
+      <p style="margin-top:10px;color:var(--muted);max-width:60ch;">
+        The amount, the printing and the delivery are settled before the button. Nothing is charged
+        until it is pressed, and the size can still be changed from here.
+      </p>
+
+      <div class="pay paybox" style="margin-top:24px;">
+        <!-- ===== Left column: money first ===== -->
+        <div class="stack">
+          <div class="summary" id="summary">
+            <div style="display:flex;gap:14px;align-items:center;padding:14px 16px 0;">
+              <img src="images/shirt-home.svg" alt="Home 2026 jersey in navy, size M, printed with a name and a number on the back." style="width:76px;height:auto;border:1px solid var(--line);border-radius:8px;">
+              <p style="margin:0;font-size:14px;color:var(--muted);">One jersey · size M · printing on the back</p>
+            </div>
+            <table>
+              <caption>Order summary</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Detail</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Home 2026 · navy</th>
+                  <td>Size M</td>
+                  <td>€89.90</td>
+                </tr>
+                <tr>
+                  <th scope="row">Printing</th>
+                  <td>Name and number, back</td>
+                  <td>€15.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Delivery</th>
+                  <td>Chosen below</td>
+                  <td>€0.00–4.90</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Tax included (25.5 %)</td>
+                  <td>€109.80</td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="edit"><a href="size.html">Edit the order — change the size or the printing →</a></p>
+          </div>
+
+          <!-- delivery: choice changes the total, so it comes before the payment method -->
+          <fieldset class="fieldset" id="delivery">
+            <legend>Delivery</legend>
+            <div class="method-list">
+              <label class="method" for="delivery-std">
+                <input id="delivery-std" name="delivery" type="radio" value="standard" checked>
+                <span>Standard delivery, 3–5 days</span>
+                <span class="price">€4.90</span>
+              </label>
+              <label class="method" for="delivery-pickup">
+                <input id="delivery-pickup" name="delivery" type="radio" value="pickup">
+                <span>Free pickup, Helsinki shop</span>
+                <span class="price">€0.00</span>
+              </label>
+            </div>
+            <p class="hint" style="margin-top:10px;">
+              Pickup is ready the next working day after the order. Returns within 30 days, printing excepted.
+            </p>
+          </fieldset>
+
+          <div class="note">
+            <strong>Address and terms:</strong> the parcel goes to the address on the account, which is
+            shown again on the confirmation. By paying you accept the 30-day return rule and the printing
+            exception.
+          </div>
+        </div>
+
+        <!-- ===== Right column: method, fields, button ===== -->
+        <div class="stack">
+          <fieldset class="fieldset">
+            <legend>Payment method</legend>
+            <div class="method-list">
+              <label class="method" for="pay-card">
+                <input id="pay-card" name="pay" type="radio" value="card" checked>
+                <span>Card</span>
+                <span class="price">Visa · Mastercard</span>
+              </label>
+              <label class="method" for="pay-mobilepay">
+                <input id="pay-mobilepay" name="pay" type="radio" value="mobilepay">
+                <span>MobilePay</span>
+                <span class="price">Finland</span>
+              </label>
+              <label class="method" for="pay-bank">
+                <input id="pay-bank" name="pay" type="radio" value="bank">
+                <span>Bank transfer</span>
+                <span class="price">1–2 days</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- card fields appear only when the card method is chosen -->
+          <div class="card-fields" aria-live="off">
+            <div class="field full">
+              <label for="card-number">Card number</label>
+              <input id="card-number" name="card-number" type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" autocomplete="cc-number">
+            </div>
+            <div class="field">
+              <label for="card-exp">Expiry</label>
+              <input id="card-exp" name="card-exp" type="text" placeholder="MM / YY" autocomplete="cc-exp">
+            </div>
+            <div class="field">
+              <label for="card-cvc">CVC</label>
+              <input id="card-cvc" name="card-cvc" type="text" inputmode="numeric" placeholder="123" autocomplete="cc-csc">
+            </div>
+          </div>
+
+          <div class="total total-std">
+            <span>Total with standard delivery</span>
+            <b>€109.80</b>
+          </div>
+          <div class="total total-pickup">
+            <span>Total with free pickup</span>
+            <b>€104.90</b>
+          </div>
+
+          <form action="#thanks" method="get">
+            <button class="btn btn-primary pay-button" type="submit">
+              <span class="pay-std">Pay €109.80</span><span class="pay-pick">Pay €104.90</span>
+            </button>
+          </form>
+
+          <p class="pay-note">
+            Card declined? <a href="#help">Open the payment help</a> — the order is kept for 48 hours and
+            nothing is charged twice.
+          </p>
+
+          <div class="note" id="help">
+            <strong>Payment help.</strong> A declined card is usually a bank block on the first payment to
+            a new shop. Try MobilePay, or call the bank and pay again with the same order number. The cart
+            stays as it is until the order is paid or 48 hours pass.
+          </div>
+        </div>
+      </div>
+
+      <!-- confirmation text shown when the pay button carries the visitor to #thanks -->
+      <div class="band" id="thanks" style="border-top:1px solid var(--line-soft);margin-top:26px;">
+        <h2 style="font-size:24px;">What happens after the button</h2>
+        <p class="hint" style="margin-top:8px;max-width:62ch;">
+          The confirmation names the delivery estimate — three to five days for standard, the next working
+          day for pickup — and repeats the amount and the method. A printed shirt adds one day.
+        </p>
+        <p class="terms">
+          This page is a design prototype for a course assignment: no payment is processed and no card
+          data leaves the browser.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h2>All-kits</h2>
+        <p>Football jerseys from a small shop in Helsinki. Club, retro and printed shirts, sizes XS to XXL.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="size.html">Sizes and fit</a></li>
+          <li><a href="payment.html">Payment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Shop</h2>
+        <ul>
+          <li><a href="size.html#chart">Size chart</a></li>
+          <li><a href="payment.html#delivery">Delivery and returns</a></li>
+          <li><a href="#main">Back to top ↑</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 All-kits · a student project for DIG001IT1AE-3033</span>
+      <span>HTML + CSS. No JavaScript.</span>
+    </div>
+  </footer>
+</body>
+</html>

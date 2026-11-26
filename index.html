@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All-kits is a small Helsinki shop selling club, retro and printed football jerseys. Real stock per size, a size chart in centimetres, delivery in three to five days.">
+  <meta name="author" content="Tianze Tang">
+  <meta name="theme-color" content="#0F3460">
+  <title>All-kits — football jerseys, real stock and real sizes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ===== Header: crest, menu, cart — the same on all three pages ===== -->
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html">
+        <span class="crest" aria-hidden="true">AK</span>
+        All-kits
+      </a>
+
+      <!-- The menu button only appears under 768 px: checkbox + label, no script -->
+      <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Open the navigation menu">
+      <label class="menu-btn" for="menu-toggle"><span aria-hidden="true">☰</span></label>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="size.html">Sizes</a></li>
+          <li><a href="payment.html">Payment</a></li>
+        </ul>
+      </nav>
+
+      <a class="cart" href="payment.html" aria-label="Cart, one jersey">
+        <span class="cart-label">Cart</span>
+        <span class="cart-count">1</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero: promise first, then proof ===== -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <span class="eyebrow">Helsinki · since 2019</span>
+          <h1>Real shirts. Real sizes. Delivered in three to five days.</h1>
+          <p>
+            Club, retro and printed jerseys from one small shop. Every size on this site is in stock
+            in the shop, and the chart is measured in centimetres — not in guesses.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-secondary" href="size.html">Shop jerseys</a>
+            <a class="btn btn-quiet" href="#story" style="color:#D5E2F0;">Read the shop story</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="images/shop-rail.svg" alt="Three jerseys hanging on a rail in the shop: a navy home shirt, a white and red retro shirt and a cream printed shirt.">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured jerseys ===== -->
+    <section class="wrap band">
+      <div class="section-head">
+        <h2>Three shirts on the rail</h2>
+        <p>Each one is one product, one price, one stock line. Open a shirt to choose the size.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <img src="images/shirt-home.svg" alt="Navy home jersey with white collar and cuffs, the number 7 and the words Home 2026.">
+          <div class="card-body">
+            <h3>Home 2026 · navy</h3>
+            <p class="label label-in">In stock · S, M, L, XL</p>
+            <p class="card-price">€89.90</p>
+            <a class="btn btn-primary" href="size.html#size">Choose size</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/shirt-retro.svg" alt="White retro football shirt with a wide dark red band across the chest and the number 98.">
+          <div class="card-body">
+            <h3>Away shirt 1998 · retro</h3>
+            <p class="label label-in">In stock · XS, M, XXL</p>
+            <p class="card-price">€119.00</p>
+            <a class="btn btn-primary" href="size.html#size">Choose size</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/shirt-print.svg" alt="Cream printed football shirt with a black number 10 and a plain round crest.">
+          <div class="card-body">
+            <h3>Printed No.10 · cream</h3>
+            <p class="label label-out">Out of stock · M</p>
+            <p class="card-price">€99.00</p>
+            <a class="btn btn-secondary" href="size.html#restock">Join the restock list</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- proof row: what the shop does, not what it promises -->
+      <div class="proof">
+        <div>
+          <strong>Stock is per size</strong>
+          <span>The stock line on the size page belongs to the size you pick, not to the product.</span>
+        </div>
+        <div>
+          <strong>Measured chart</strong>
+          <span>Chest and length in centimetres for XS to XXL, printed next to the buttons.</span>
+        </div>
+        <div>
+          <strong>Delivery and returns</strong>
+          <span>€4.90 or free pickup in Helsinki. Returns within 30 days, printing excepted.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Story and quote ===== -->
+    <section class="wrap band" id="story">
+      <div class="story">
+        <div>
+          <div class="section-head">
+            <h2>One shop, one street, three shelves</h2>
+          </div>
+          <p>
+            All-kits opened in 2019 with a rail of second-hand shirts and a notebook of sizes. Today the
+            shop sells three kinds of jersey: the current home shirt, the retro shirt people ask for by
+            season, and the printed shirt with a name and a number on the back.
+          </p>
+          <p>
+            The site exists because of one problem found in the old shop: stock and size were hidden
+            until the checkout. Here both are visible before the cart — the size page shows the stock of
+            the size you clicked, and the payment page shows the amount before you type a card number.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="size.html">Open the size page</a>
+            <a class="btn btn-secondary" href="payment.html">See the payment page</a>
+          </div>
+        </div>
+
+        <div class="stack">
+          <blockquote>
+            <p>“I ordered a retro shirt on a Tuesday and wore it on Saturday. The size chart was right
+              and nobody asked me for the same address twice.”</p>
+            <footer>— Customer note, Helsinki, October 2026</footer>
+          </blockquote>
+          <div class="note">
+            <strong>Printing:</strong> name and number are added in the shop and take one extra day.
+            A printed shirt cannot be returned, so the size is chosen before the print, not after.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h2>All-kits</h2>
+        <p>Football jerseys from a small shop in Helsinki. Club, retro and printed shirts, sizes XS to XXL.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="size.html">Sizes and fit</a></li>
+          <li><a href="payment.html">Payment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Shop</h2>
+        <ul>
+          <li><a href="size.html#chart">Size chart</a></li>
+          <li><a href="payment.html#delivery">Delivery and returns</a></li>
+          <li><a href="#main">Back to top ↑</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 All-kits · a student project for DIG001IT1AE-3033</span>
+      <span>HTML + CSS. No JavaScript.</span>
+    </div>
+  </footer>
+</body>
+</html>
